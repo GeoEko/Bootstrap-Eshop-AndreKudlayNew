@@ -1,3 +1,53 @@
+/* Обнуление =========================*/
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+img {
+    /* vertical-align: top; */
+    max-width: 100%;
+    height: auto;
+    /*Эти правила задают адаптивность изображений*/
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+    font-size: inherit;
+}
+
+/* Обнуление ================================*/
+/*Переменные для цвета=======================*/
+:root {
+    --bg-color: #f5f5f5;
+    --text-color: #6c757d;
+    --accent-color: #ffd333;
+    --contrast-color: #3d464d;
+    --gray-color: #ccc;
+
+}
+
+/*Переменные для цвета========================*/
+/*Задаем и определяем первичную структуру сайта*/
 html,
 body {
     height: 100%;
@@ -6,6 +56,8 @@ body {
 body {
     min-width: 320px;
     font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }
 
 .wrapper {
@@ -17,3 +69,124 @@ body {
 main.main {
     flex: 1 1 auto;
 }
+
+/*Задаем и определяем первичную структуру сайта======*/
+/*Задаем правила общие для тегов для сайта===============*/
+a {
+    color: var(--text-color);
+    text-decoration: underline;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.btn,
+.dropdown-menu,
+.form-control {
+    border-radius: 0;
+}
+
+.form-control:focus {
+    color: var(--text-color);
+    border-color: var(--accent-color);
+    box-shadow: none;
+}
+
+.form-control::placeholder {
+    color: var(--gray-color);
+}
+
+.btn-warning {
+    background-color: var(--accent-color);
+    color: var(--contrast-color);
+}
+
+.btn-outline-warning {
+    border-color: var(--accent-color);
+}
+
+.btn-outline-warning:hover {
+    background-color: var(--accent-color);
+    color: var(--contrast-color);
+}
+
+.bg-warning {
+    background-color: var(--accent-color) !important;
+}
+
+/*Задаем правила общие для тегов для сайта===============*/
+
+/* Header Rules===================*/
+.header-top-phone a {
+    text-decoration: none;
+    transform: 0.3s;
+}
+
+.header-top-phone a:hover {
+    text-decoration: underline;
+}
+
+ul.social-icons {
+    margin-bottom: 0;
+    padding: 0;
+    /* display: flex;
+    justify-content: center; */
+}
+
+ul.social-icons li {
+    margin-right: 15px;
+}
+
+ul.social-icons a {
+    background-color: var(--accent-color);
+    color: var(--contrast-color);
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    float: left;
+    padding-top: 1.5px;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+ul.social-icons a:hover {
+    background-color: var(--contrast-color);
+    color: var(--accent-color);
+}
+
+.header-top .btn {
+    background-color: #fff;
+}
+
+/*= Header Rules-Top===================*/
+
+/*= Header Rules-Middle===================*/
+.header-logo {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--accent-color);
+    transition: all 0.3c;
+}
+
+.header-logo:hover {
+    color: var(--contrast-color);
+}
+
+.cart-buttons .btn {
+    color: var(--contrast-color);
+    transition: all 0.3c;
+}
+
+.cart-buttons .btn:hover {
+    border: 1px solid var(--contrast-color);
+}
+
+.badge {}
+
+.cart-badge {}
+
+
+
+/*= Header Rules-Middle===================*/
