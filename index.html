@@ -68,21 +68,11 @@
 
 			<div class="header-middle bg-white py-4">
 				<div class="container-fluid">
-					<div class="row">
-						<div class="col-md-4">
+					<div class="row align-items-center">
+						<div class="col-lg-4 col-sm-4">
 							<a href="index.html" class="header-logo h1">E-Shop</a>
 						</div>
-						<div class="col-md-4">
-							<form action="">
-								<div class="input-group">
-									<input type="text" class="form-control" name="search" placeholder="Searching..."
-										aria-label="Searching..." aria-describedby="button-search">
-									<button class="btn btn-outline-warning" type="submit" id="button-search"><i
-											class="fa-solid fa-magnifying-glass"></i></button>
-								</div>
-							</form>
-						</div>
-						<div class="col-md-4">
+						<div class=" col-lg-4 order-md-2 d-none d-lg-block">
 							<div class="cart-buttons text-end">
 								<a href="#" class="btn p-1">
 									<i class="fa-solid fa-heart"></i>
@@ -93,37 +83,197 @@
 									<i class="fa-solid fa-cart-shopping"></i>
 									<span class="badge text-bg-warning cart-badge bg-warning rounded-circle">6</span>
 								</button>
-								<!-- Боковая панель навигации-Offcanvas -->
-								<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasCart"
-									aria-labelledby="offcanvasCartLabel">
-									<div class="offcanvas-header">
-										<h5 class="offcanvas-title" id="offcanvasCartLabel">Offcanvas</h5>
-										<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-									</div>
-									<div class="offcanvas-body">
-										<div>
-											Some text as placeholder. In real life you can have the elements you have chosen. Like, text,
-											images, lists, etc.
-										</div>
-										<div class="dropdown mt-3">
-											<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
-												Dropdown button
-											</button>
-											<ul class="dropdown-menu">
-												<li><a class="dropdown-item" href="#">Action</a></li>
-												<li><a class="dropdown-item" href="#">Another action</a></li>
-												<li><a class="dropdown-item" href="#">Something else here</a></li>
-											</ul>
-										</div>
-									</div>
-								</div>
+
 							</div>
+						</div>
+						<div class="col-lg-4 col-sm-8 order-md-1 mt-2 mt-md-0">
+							<form action="">
+								<div class="input-group">
+									<input type="text" class="form-control" name="search" placeholder="Searching..."
+										aria-label="Searching..." aria-describedby="button-search">
+									<button class="btn btn-outline-warning" type="submit" id="button-search"><i
+											class="fa-solid fa-magnifying-glass"></i></button>
+								</div>
+							</form>
+						</div>
+
+					</div>
+				</div>
+				<!-- Боковая панель навигации-Offcanvas -->
+				<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCart" aria-labelledby="offcanvasCartLabel">
+					<div class="offcanvas-header">
+						<h5 class="offcanvas-title" id="offcanvasCartLabel">Корзина для товаров</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+					</div>
+					<div class="offcanvas-body">
+						<div>
+							Some text as placeholder. In real life you can have the elements you have chosen. Like, text,
+							images, lists, etc.
+						</div>
+						<div class="dropdown mt-3">
+							<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+								Dropdown button
+							</button>
+							<ul class="dropdown-menu">
+								<li><a class="dropdown-item" href="#">Action</a></li>
+								<li><a class="dropdown-item" href="#">Another action</a></li>
+								<li><a class="dropdown-item" href="#">Something else here</a></li>
+							</ul>
 						</div>
 					</div>
 				</div>
 			</div><!-- ./header-middle -->
 		</header>
-		<main class="main">Content</main>
+		<div class="header-bottom sticky-top">
+			<nav class="navbar navbar-expand-lg  bg-dark" data-bs-theme="dark">
+				<div class="container-fluid">
+					<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavBar"
+						aria-controls="offcanvasNavBar" aria-label="Переключить навигацию">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasNavBar"
+						aria-labelledby="offcanvasNavBarLabel">
+						<div class="offcanvas-header">
+							<h5 class="offcanvas-title" id="offcanvasNavBarLabel">Catalog</h5>
+							<button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+								aria-label="Закрыть"></button>
+						</div>
+						<div class="offcanvas-body">
+							<ul class="navbar-nav justify-content-start flex-grow-1 pe-3">
+								<li class="nav-item">
+									<a class="nav-link active" aria-current="page" href="index.html">Home</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">About</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Contact</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Payment</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Delivery</a>
+								</li>
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+										data-bs-auto-close="outside" aria-expanded="false">
+										Catalog
+									</a>
+									<ul class="dropdown-menu dropdown-menu-end animate slideIn">
+										<li><a class="dropdown-item" href="#">Обувь</a></li>
+										<li><a class="dropdown-item" href="#">Джинсы</a></li>
+										<li class="nav-item dropend">
+											<a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown"
+												data-bs-auto-close="outside">Sportswear</a>
+											<ul class="dropdown-menu dropdown-menu-end animate slideIn">
+												<li><a class="dropdown-item" href="#">Men's Sportswear</a></li>
+												<li class="nav-item dropend">
+													<a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown"
+														data-bs-auto-close="outside">Women's Sportswear</a>
+													<ul class="dropdown-menu dropdown-menu-end animate slideIn">
+														<li>
+															<a class="dropdown-item" href="#">Item 3.2.1</a>
+														</li>
+														<li>
+															<a class="dropdown-item" href="#">Item 3.2.2</a>
+														</li>
+														<li>
+															<a class="dropdown-item" href="#">Item 3.2.3</a>
+														</li>
+													</ul>
+												</li>
+												<li><a class="dropdown-item" href="#">Baby's Sportswear</a></li>
+												<li><a class="dropdown-item" href="#">Spec's Sportswear</a></li>
+											</ul>
+										</li>
+										<li><a class="dropdown-item" href="#">Coat</a></li>
+										<li><a class="dropdown-item" href="#">Shirts</a></li>
+									</ul>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">ElseInfo</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="d-block d-lg-none">
+						<a href="#" class="btn p-1">
+							<i class="fa-solid fa-heart"></i>
+							<span class="badge text-bg-warning cart-badge bg-warning rounded-circle">4</span>
+						</a>
+						<button class="btn p-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart"
+							aria-controls="offcanvasCart">
+							<i class="fa-solid fa-cart-shopping"></i>
+							<span class="badge text-bg-warning cart-badge bg-warning rounded-circle">6</span>
+						</button>
+					</div>
+				</div>
+			</nav>
+		</div><!-- ./header-bottom -->
+		<main class="main">
+			<div class="container-fluid">
+				<p>Далеко-далеко, за словесными горами в стране гласных и согласных живут рыбные тексты. По всей необходимыми,
+					путь, оксмокс которой сбить которое алфавит дал пояс рыбными не запятых злых приставка послушавшись.
+					Составитель своего маленький одна.</p>
+				<p>Но если которой свою алфавит! Семантика, на берегу? Семь маленькая свой силуэт ему точках страну текстами все
+					инициал, там пустился буквенных, языкового жизни своих? Ipsum имени залетают, сих рекламных себя его.</p>
+				<p>Парадигматическая несколько города ручеек большого свой. Первую обеспечивает все, инициал взобравшись решила
+					коварных о назад, родного лучше заголовок использовало от всех курсивных путь. Это грамматики прямо переписали
+					выйти дороге которое реторический!</p>
+				<p>Всеми возвращайся одна вопроса рукопись океана собрал послушавшись запятых дал путь переписывается которой
+					переулка жаренные строчка, диких грустный текст силуэт то пунктуация, сбить по всей проектах первую? Выйти
+					имени до страну.</p>
+				<p>Заманивший залетают последний, снова скатился грамматики рыбного но рыбными запятых домах там, использовало
+					возвращайся первую живет, буквенных подпоясал. Текстов свой деревни образ моей имени предупредила коварный на
+					берегу наш журчит вопрос!</p>
+				<p>Одна там ему языком напоивший. Продолжил, по всей запятых языкового снова рукописи меня сбить мир текст что
+					маленькая гор безорфографичный маленький послушавшись использовало свой переписывается путь заманивший
+					составитель злых, имени повстречался.</p>
+				<p>Меня переписывается lorem образ строчка грамматики коварных, своего буквенных. Первую ты языкового буквенных
+					свое свой сбить, домах, грамматики одна, от всех раз своих всемогущая ведущими. Имени однажды на берегу
+					безопасную знаках реторический.</p>
+				<p>Вершину вскоре журчит инициал страну приставка ipsum свое вопрос океана предупреждал большого рукопись ручеек
+					заманивший, проектах ее языкового жизни алфавит своих раз наш своего? Жизни даль предупреждал путь ведущими
+					его.</p>
+				<p>Рукопись семантика путь наш оксмокс, проектах даль запятой ему парадигматическая домах жизни. Взобравшись ты
+					даже предложения свое злых на берегу взгляд, повстречался, домах всемогущая знаках напоивший. Вершину жизни
+					прямо рыбного своих.</p>
+				<p>Семь пунктуация маленький рукописи? До рыбного своего реторический сбить залетают, не текста сих, буквоград
+					букв, маленькая несколько? Заманивший, несколько моей рыбными свое сбить ведущими? Единственное языком
+					ведущими своих коварных журчит.</p>
+				<p>Первую оксмокс, над себя если ее которое на берегу семь все грамматики ручеек дороге переписывается.
+					Семантика путь встретил, океана курсивных своих дорогу. Прямо ее рот несколько свою взобравшись дорогу
+					пунктуация языкового?</p>
+				<p>Использовало, на берегу? Напоивший до дороге заголовок, необходимыми, о бросил щеке предупреждал лучше своих
+					коварных они вершину решила грустный семантика. Дорогу но мир вопрос маленькая дал безопасную единственное раз
+					щеке послушавшись.</p>
+				<p>Напоивший, города заманивший, встретил переулка переписывается, свою пояс скатился ты своего буквенных они
+					всемогущая языкового бросил от всех большой живет пунктуация приставка раз? Гор буквенных строчка себя путь
+					семь проектах запятой!</p>
+				<p>Дорогу меня предложения жизни ipsum проектах грустный толку они встретил одна рукописи переулка власти
+					однажды имеет если большой домах жаренные точках пояс ты, повстречался осталось запятой? Пустился встретил
+					большого рукопись.</p>
+				<p>Ipsum рукопись толку даль, грамматики буквенных букв имеет за эта! Повстречался ее вопрос залетают это
+					парадигматическая океана заглавных свой? Языкового вскоре пустился дал алфавит бросил семь от всех раз власти
+					напоивший!</p>
+				<p>Наш своего всемогущая снова свое страна? Одна ручеек имени собрал своего то страна которой наш, города раз
+					курсивных образ он вершину переписали подпоясал продолжил вопрос? Вершину, ipsum? Взобравшись,
+					безорфографичный одна.</p>
+				<p>Точках семь обеспечивает не подпоясал то маленький переписывается даже одна подзаголовок, живет жизни
+					жаренные запятых языкового запятой текста переулка диких страна страну буквоград инициал собрал дал? Несколько
+					заголовок щеке себя!</p>
+				<p>Образ одна подпоясал, своих свой маленький сих. Своего единственное, вдали все большой своих живет что точках
+					буквенных скатился. Обеспечивает которой, языком великий но если большого большой силуэт маленький пояс имени.
+				</p>
+				<p>Переписали, последний даль lorem вдали снова алфавит моей первую коварных, подзаголовок заглавных ipsum
+					пунктуация? Вопроса свою, дорогу выйти напоивший снова своего ведущими которое, даже дал свое живет раз,
+					безопасную парадигматическая.</p>
+				<p>Путь всеми собрал запятой послушавшись власти ты необходимыми парадигматическая эта встретил, прямо страна
+					строчка семантика продолжил предупредила, они, скатился первую. Рыбными, города? Сих реторический своего,
+					рыбными за вдали всеми жаренные.</p>
+			</div>
+		</main>
 		<footer class="footer">Footer</footer>
 	</div>
 
