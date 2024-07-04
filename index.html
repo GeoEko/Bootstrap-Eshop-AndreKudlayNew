@@ -4,14 +4,15 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Bootstrap demo</title>
+	<link rel="shortcut icon" href="assets/img/icon-site/favicon.ico" type="image/x-icon">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 	<link rel="stylesheet" href="assets/css/main.css">
-	<link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+	<title>Bootstrap Eshop</title>
+
 </head>
 
 <body>
@@ -75,7 +76,7 @@
 						<div class=" col-lg-4 order-md-2 d-none d-lg-block">
 							<div class="cart-buttons text-end">
 								<a href="#" class="btn p-1">
-									<i class="fa-solid fa-heart"></i>
+									<i class="fa-solid fa-heart" title="Heart"></i>
 									<span class="badge text-bg-warning cart-badge bg-warning rounded-circle">4</span>
 								</a>
 								<button class="btn p-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart"
@@ -124,7 +125,7 @@
 				</div>
 			</div><!-- ./header-middle -->
 		</header>
-		<div class="header-bottom sticky-top">
+		<div class="header-bottom sticky-top" id="header-nav">
 			<nav class="navbar navbar-expand-lg  bg-dark" data-bs-theme="dark">
 				<div class="container-fluid">
 					<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavBar"
@@ -165,12 +166,12 @@
 										<li><a class="dropdown-item" href="#">Джинсы</a></li>
 										<li class="nav-item dropend">
 											<a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown"
-												data-bs-auto-close="outside">Sportswear</a>
+												data-bs-auto-close="outside" aria-expanded="false">Sportswear</a>
 											<ul class="dropdown-menu dropdown-menu-end animate slideIn">
 												<li><a class="dropdown-item" href="#">Men's Sportswear</a></li>
 												<li class="nav-item dropend">
 													<a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown"
-														data-bs-auto-close="outside">Women's Sportswear</a>
+														data-bs-auto-close="outside" aria-expanded="false">Women's Sportswear</a>
 													<ul class="dropdown-menu dropdown-menu-end animate slideIn">
 														<li>
 															<a class="dropdown-item" href="#">Item 3.2.1</a>
@@ -212,66 +213,350 @@
 			</nav>
 		</div><!-- ./header-bottom -->
 		<main class="main">
+			<div id="carouselEshop" class="carousel slide carousel-fade">
+				<div class="carousel-indicators">
+					<button type="button" data-bs-target="#carouselEshop" data-bs-slide-to="0" class="active" aria-current="true"
+						aria-label="Slide 1"></button>
+					<button type="button" data-bs-target="#carouselEshop" data-bs-slide-to="1" aria-label="Slide 2"></button>
+					<button type="button" data-bs-target="#carouselEshop" data-bs-slide-to="2" aria-label="Slide 3"></button>
+					<button type="button" data-bs-target="#carouselEshop" data-bs-slide-to="3" aria-label="Slide 4"></button>
+					<button type="button" data-bs-target="#carouselEshop" data-bs-slide-to="4" aria-label="Slide 5"></button>
+				</div>
+				<div class="carousel-inner">
+					<div class="carousel-item active">
+						<img src="assets/img/slider/Image_1.jpg" class="d-block w-100" alt="...">
+						<div class="carousel-caption d-none d-md-block">
+							<h2>Метка первого слайда</h2>
+							<p>Некоторый репрезентативный заполнитель для первого слайда.</p>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<img src="assets/img/slider/Image_2.jpg" class="d-block w-100" alt="...">
+						<div class="carousel-caption d-none d-md-block">
+							<h2>Метка второго слайда</h2>
+							<p>Некоторый репрезентативный заполнитель для второго слайда.</p>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<img src="assets/img/slider/Image_3.jpg" class="d-block w-100" alt="...">
+						<div class="carousel-caption d-none d-md-block">
+							<h2>Метка третьего слайда</h2>
+							<p>Некоторый репрезентативный заполнитель для третьего слайда.</p>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<img src="assets/img/slider/Image_4.jpg" class="d-block w-100" alt="...">
+						<div class="carousel-caption d-none d-md-block">
+							<h2>Метка четвертого слайда</h2>
+							<p>Некоторый репрезентативный заполнитель для четвертого слайда.</p>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<img src="assets/img/slider/Image_5.jpg" class="d-block w-100" alt="...">
+						<div class="carousel-caption d-none d-md-block">
+							<h2>Метка пятого слайда</h2>
+							<p>Некоторый репрезентативный заполнитель для пятого слайда.</p>
+						</div>
+					</div>
+				</div>
+				<button class="carousel-control-prev" type="button" data-bs-target="#carouselEshop" data-bs-slide="prev">
+					<span class="carousel-prev-icon" aria-hidden="true">
+						<i class="fa-solid fa-angle-right fa-rotate-180"></i>
+					</span>
+					<span class="visually-hidden">Предыдущий</span>
+				</button>
+				<button class="carousel-control-next" type="button" data-bs-target="#carouselEshop" data-bs-slide="next">
+					<span class="carousel-next-icon" aria-hidden="true"><i class="fa-solid fa-angle-right"></i></span>
+					<span class="visually-hidden">Следующий</span>
+				</button>
+			</div>
+			<section class="advantages">
+				<div class="container-fluid">
+					<div class="row mb-5">
+						<div class="col-12">
+							<h2 class="section-title"><span>Наши преимущества</span></h2>
+						</div>
+					</div>
+					<!-- =======Карточки=========-->
+					<div class="row gy-4 items">
+						<div class="col-lg-3 col-sm-6">
+							<div class="item">
+								<p><i class="fa-solid fa-shipping-fast"></i></p>
+								<p>Прямые поставки от производителей брендов</p>
+							</div>
+						</div>
+						<div class="col-lg-3 col-sm-6">
+							<div class="item">
+								<p><i class="fa-solid fa-cubes"></i></p>
+								<p>Широкий ассортимент товаров. Более 10. тыс. наименований</p>
+							</div>
+						</div>
+						<div class="col-lg-3 col-sm-6">
+							<div class="item">
+								<p><i class="fa-solid fa-hand-holding-usd"></i></p>
+								<p>Приятные и конкурентные цены</p>
+							</div>
+						</div>
+						<div class="col-lg-3 col-sm-6">
+							<div class="item">
+								<p><i class="fa-solid fa-user-graduate"></i></p>
+								<p>Консультации от профессионалов</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section><!-- ./main.advantages -->
+			<section class="featured-products px-lg-3">
+				<div class="container-fluid">
+					<div class="row mb-5">
+						<div class="col-12">
+							<h2 class="section-title"><span>Рекомендуемые товары</span></h2>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+							<div class="product-card">
+								<div class="product-card-offer">
+									<div class="offer-hit">Hit</div>
+									<div class="offer-new">New</div>
+								</div>
+								<div class="product-thumb">
+									<a href="product.html" target="_blank"><img src="assets/img/product/product_1.jpg" alt=""></a>
+								</div>
+								<div class="product-details">
+									<h4>
+										<a href="product.html" target="_blank">Product 1 Lorem ipsum dolor sit amet consectetur
+											adipisicing.</a>
+									</h4>
+									<p class="product-excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, rem.
+									</p>
+									<div class="product-bottom-details d-flex justify-content-between align-items-center">
+										<div class="product-price">
+											<small>$70</small>$65
+										</div>
+										<div class="product-links">
+											<a href="#" class="btn btn-outline-secondary add-to-cart"><i
+													class="fa-solid fa-cart-shopping"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+							<div class="product-card">
+								<div class="product-card-offer">
+									<div class="offer-hit">Hit</div>
+									<!-- <div class="offer-new">New</div> -->
+								</div>
+								<div class="product-thumb">
+									<a href="product.html" target="_blank"><img src="assets/img/product/product_2.jpg" alt=""></a>
+								</div>
+								<div class="product-details">
+									<h4>
+										<a href="product.html" target="_blank">Product 2 Lorem ipsum dolor sit amet consectetur
+											adipisicing.</a>
+									</h4>
+									<p class="product-excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, rem.
+									</p>
+									<div class="product-bottom-details d-flex justify-content-between align-items-center">
+										<div class="product-price">
+											<small>$70</small>$65
+										</div>
+										<div class="product-links">
+											<a href="#" class="btn btn-outline-secondary add-to-cart"><i
+													class="fa-solid fa-cart-shopping"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+							<div class="product-card">
+								<div class="product-card-offer">
+									<!-- <div class="offer-hit">Hit</div> -->
+									<div class="offer-new">New</div>
+								</div>
+								<div class="product-thumb">
+									<a href="product.html" target="_blank"><img src="assets/img/product/product_3.jpg" alt=""></a>
+								</div>
+								<div class="product-details">
+									<h4>
+										<a href="product.html" target="_blank">Product 3 L</a>
+									</h4>
+									<p class="product-excerpt">Lorem ipsum dolor sit amet, Officia, rem.
+									</p>
+									<div class="product-bottom-details d-flex justify-content-between align-items-center">
+										<div class="product-price">
+											<small>$70</small>$65
+										</div>
+										<div class="product-links">
+											<a href="#" class="btn btn-outline-secondary add-to-cart"><i
+													class="fa-solid fa-cart-shopping"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+							<div class="product-card">
+								<div class="product-card-offer">
+									<!-- <div class="offer-hit">Hit</div>
+									<div class="offer-new">New</div> -->
+								</div>
+								<div class="product-thumb">
+									<a href="product.html" target="_blank"><img src="assets/img/product/product_4.jpg" alt=""></a>
+								</div>
+								<div class="product-details">
+									<h4>
+										<a href="product.html" target="_blank">Product 4 Lorem ipsum dolor sit amet consectetur
+											adipisicing. Lorem ipsum dolor sit amet consectetur
+											adipisicing.</a>
+									</h4>
+									<p class="product-excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, rem.
+									</p>
+									<div class="product-bottom-details d-flex justify-content-between align-items-center">
+										<div class="product-price">
+											<small>$70</small>$65
+										</div>
+										<div class="product-links">
+											<a href="#" class="btn btn-outline-secondary add-to-cart"><i
+													class="fa-solid fa-cart-shopping"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+							<div class="product-card">
+								<div class="product-card-offer">
+									<div class="offer-hit">Hit</div>
+									<div class="offer-new">New</div>
+								</div>
+								<div class="product-thumb">
+									<a href="product.html" target="_blank"><img src="assets/img/product/product_5.jpg" alt=""></a>
+								</div>
+								<div class="product-details">
+									<h4>
+										<a href="product.html" target="_blank">Product 5 Lorem ipsum dolor
+											adipisicing.</a>
+									</h4>
+									<p class="product-excerpt">
+									</p>
+									<div class="product-bottom-details d-flex justify-content-between align-items-center">
+										<div class="product-price">
+											<small></small>$65
+										</div>
+										<div class="product-links">
+											<a href="#" class="btn btn-outline-secondary add-to-cart"><i
+													class="fa-solid fa-cart-shopping"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+							<div class="product-card">
+								<div class="product-card-offer">
+									<div class="offer-hit">Hit</div>
+									<div class="offer-new">New</div>
+								</div>
+								<div class="product-thumb">
+									<a href="product.html" target="_blank"><img src="assets/img/product/product_6.jpg" alt=""></a>
+								</div>
+								<div class="product-details">
+									<h4>
+										<a href="product.html" target="_blank">Product 6 Lorem ipsum dolor sit amet consectetur
+											adipisicing.</a>
+									</h4>
+									<p class="product-excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, rem.
+									</p>
+									<div class="product-bottom-details d-flex justify-content-between align-items-center">
+										<div class="product-price">
+											<small>$70</small>$100
+										</div>
+										<div class="product-links">
+											<a href="#" class="btn btn-outline-secondary add-to-cart"><i
+													class="fa-solid fa-cart-shopping"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+							<div class="product-card">
+								<div class="product-card-offer">
+									<div class="offer-hit">Hit</div>
+									<div class="offer-new">New</div>
+								</div>
+								<div class="product-thumb">
+									<a href="product.html" target="_blank"><img src="assets/img/product/product_7.jpg" alt=""></a>
+								</div>
+								<div class="product-details">
+									<h4>
+										<a href="product.html" target="_blank">Product 7 Lorem ipsum dolor sit amet consectetur
+											adipisicing.</a>
+									</h4>
+									<p class="product-excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor
+										sit amet, consectetur adipisicing elit.Officia, rem.
+									</p>
+									<div class="product-bottom-details d-flex justify-content-between align-items-center">
+										<div class="product-price">
+											<small>$70</small>$65
+										</div>
+										<div class="product-links">
+											<a href="#" class="btn btn-outline-secondary add-to-cart"><i
+													class="fa-solid fa-cart-shopping"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+							<div class="product-card">
+								<div class="product-card-offer">
+									<div class="offer-hit">Hit</div>
+									<div class="offer-new">New</div>
+								</div>
+								<div class="product-thumb">
+									<a href="product.html" target="_blank"><img src="assets/img/product/product_8.jpg" alt=""></a>
+								</div>
+								<div class="product-details">
+									<h4>
+										<a href="product.html" target="_blank">Product 8</a>
+									</h4>
+									<p class="product-excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, rem.
+									</p>
+									<div class="product-bottom-details d-flex justify-content-between align-items-center">
+										<div class="product-price">
+											<small>$70</small>$65
+										</div>
+										<div class="product-links">
+											<a href="#" class="btn btn-outline-secondary add-to-cart"><i
+													class="fa-solid fa-cart-shopping"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
 			<div class="container-fluid">
-				<p>Далеко-далеко, за словесными горами в стране гласных и согласных живут рыбные тексты. По всей необходимыми,
-					путь, оксмокс которой сбить которое алфавит дал пояс рыбными не запятых злых приставка послушавшись.
-					Составитель своего маленький одна.</p>
-				<p>Но если которой свою алфавит! Семантика, на берегу? Семь маленькая свой силуэт ему точках страну текстами все
-					инициал, там пустился буквенных, языкового жизни своих? Ipsum имени залетают, сих рекламных себя его.</p>
-				<p>Парадигматическая несколько города ручеек большого свой. Первую обеспечивает все, инициал взобравшись решила
-					коварных о назад, родного лучше заголовок использовало от всех курсивных путь. Это грамматики прямо переписали
-					выйти дороге которое реторический!</p>
-				<p>Всеми возвращайся одна вопроса рукопись океана собрал послушавшись запятых дал путь переписывается которой
-					переулка жаренные строчка, диких грустный текст силуэт то пунктуация, сбить по всей проектах первую? Выйти
-					имени до страну.</p>
-				<p>Заманивший залетают последний, снова скатился грамматики рыбного но рыбными запятых домах там, использовало
-					возвращайся первую живет, буквенных подпоясал. Текстов свой деревни образ моей имени предупредила коварный на
-					берегу наш журчит вопрос!</p>
-				<p>Одна там ему языком напоивший. Продолжил, по всей запятых языкового снова рукописи меня сбить мир текст что
-					маленькая гор безорфографичный маленький послушавшись использовало свой переписывается путь заманивший
-					составитель злых, имени повстречался.</p>
-				<p>Меня переписывается lorem образ строчка грамматики коварных, своего буквенных. Первую ты языкового буквенных
-					свое свой сбить, домах, грамматики одна, от всех раз своих всемогущая ведущими. Имени однажды на берегу
-					безопасную знаках реторический.</p>
-				<p>Вершину вскоре журчит инициал страну приставка ipsum свое вопрос океана предупреждал большого рукопись ручеек
-					заманивший, проектах ее языкового жизни алфавит своих раз наш своего? Жизни даль предупреждал путь ведущими
-					его.</p>
-				<p>Рукопись семантика путь наш оксмокс, проектах даль запятой ему парадигматическая домах жизни. Взобравшись ты
-					даже предложения свое злых на берегу взгляд, повстречался, домах всемогущая знаках напоивший. Вершину жизни
-					прямо рыбного своих.</p>
-				<p>Семь пунктуация маленький рукописи? До рыбного своего реторический сбить залетают, не текста сих, буквоград
-					букв, маленькая несколько? Заманивший, несколько моей рыбными свое сбить ведущими? Единственное языком
-					ведущими своих коварных журчит.</p>
-				<p>Первую оксмокс, над себя если ее которое на берегу семь все грамматики ручеек дороге переписывается.
-					Семантика путь встретил, океана курсивных своих дорогу. Прямо ее рот несколько свою взобравшись дорогу
-					пунктуация языкового?</p>
-				<p>Использовало, на берегу? Напоивший до дороге заголовок, необходимыми, о бросил щеке предупреждал лучше своих
-					коварных они вершину решила грустный семантика. Дорогу но мир вопрос маленькая дал безопасную единственное раз
-					щеке послушавшись.</p>
-				<p>Напоивший, города заманивший, встретил переулка переписывается, свою пояс скатился ты своего буквенных они
-					всемогущая языкового бросил от всех большой живет пунктуация приставка раз? Гор буквенных строчка себя путь
-					семь проектах запятой!</p>
-				<p>Дорогу меня предложения жизни ipsum проектах грустный толку они встретил одна рукописи переулка власти
-					однажды имеет если большой домах жаренные точках пояс ты, повстречался осталось запятой? Пустился встретил
-					большого рукопись.</p>
-				<p>Ipsum рукопись толку даль, грамматики буквенных букв имеет за эта! Повстречался ее вопрос залетают это
-					парадигматическая океана заглавных свой? Языкового вскоре пустился дал алфавит бросил семь от всех раз власти
-					напоивший!</p>
-				<p>Наш своего всемогущая снова свое страна? Одна ручеек имени собрал своего то страна которой наш, города раз
-					курсивных образ он вершину переписали подпоясал продолжил вопрос? Вершину, ipsum? Взобравшись,
-					безорфографичный одна.</p>
-				<p>Точках семь обеспечивает не подпоясал то маленький переписывается даже одна подзаголовок, живет жизни
-					жаренные запятых языкового запятой текста переулка диких страна страну буквоград инициал собрал дал? Несколько
-					заголовок щеке себя!</p>
-				<p>Образ одна подпоясал, своих свой маленький сих. Своего единственное, вдали все большой своих живет что точках
-					буквенных скатился. Обеспечивает которой, языком великий но если большого большой силуэт маленький пояс имени.
+				<p>Далеко-далеко, за словесными горами в стране гласных и согласных живут рыбные тексты. Рыбного последний наш
+					ручеек маленький все имени приставка о свое, ведущими моей но от всех своего, бросил ты вопрос деревни
+					коварных.</p>
+				<p>Дал, подпоясал свое? Оксмокс ему, злых меня маленький ее путь вопроса подпоясал предупредила снова себя
+					точках. Предупредила по всей которой заголовок безопасную, всемогущая свой, проектах образ он злых, прямо они
+					точках.</p>
+				<p>Парадигматическая прямо ipsum, всеми курсивных продолжил пустился они это гор осталось жизни, над наш знаках
+					страну, алфавит он. Семь, безопасную. Осталось предупреждал свою, проектах он они ручеек мир свой правилами!
 				</p>
-				<p>Переписали, последний даль lorem вдали снова алфавит моей первую коварных, подзаголовок заглавных ipsum
-					пунктуация? Вопроса свою, дорогу выйти напоивший снова своего ведущими которое, даже дал свое живет раз,
-					безопасную парадигматическая.</p>
-				<p>Путь всеми собрал запятой послушавшись власти ты необходимыми парадигматическая эта встретил, прямо страна
-					строчка семантика продолжил предупредила, они, скатился первую. Рыбными, города? Сих реторический своего,
-					рыбными за вдали всеми жаренные.</p>
+				<p>Буквоград подзаголовок страна большого пор океана пояс рекламных выйти назад, буквенных, домах города вопрос
+					текст меня лучше путь живет страну если прямо однажды текстами скатился послушавшись первую семь! Живет,
+					жизни?</p>
+				<p>Это, снова правилами диких всеми пояс, города журчит эта мир курсивных бросил продолжил грустный гор рыбными
+					ведущими. Безопасную это о языкового вдали залетают, рукопись текстами силуэт от всех родного мир. Строчка.
+				</p>
 			</div>
 		</main>
 		<footer class="footer">Footer</footer>
