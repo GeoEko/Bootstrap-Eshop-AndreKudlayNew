@@ -13,7 +13,7 @@
 	<link rel="stylesheet" href="assets/owlcarousel/owl.theme.default.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 	<link rel="stylesheet" href="assets/css/main.css">
-	<title>Bootstrap Eshop</title>
+	<title>Eshop :: Home</title>
 
 </head>
 
@@ -72,24 +72,10 @@
 			<div class="header-middle bg-white py-4">
 				<div class="container-fluid">
 					<div class="row align-items-center">
-						<div class="col-lg-4 col-sm-4">
+						<div class="col-sm-6">
 							<a href="index.html" class="header-logo h1">E-Shop</a>
 						</div>
-						<div class=" col-lg-4 order-md-2 d-none d-lg-block">
-							<div class="cart-buttons text-end">
-								<a href="#" class="btn p-1">
-									<i class="fa-solid fa-heart" title="Heart"></i>
-									<span class="badge text-bg-warning cart-badge bg-warning rounded-circle">4</span>
-								</a>
-								<button class="btn p-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart"
-									aria-controls="offcanvasCart">
-									<i class="fa-solid fa-cart-shopping"></i>
-									<span class="badge text-bg-warning cart-badge bg-warning rounded-circle">6</span>
-								</button>
-
-							</div>
-						</div>
-						<div class="col-lg-4 col-sm-8 order-md-1 mt-2 mt-md-0">
+						<div class="col-sm-6 mt-2 mt-md-0">
 							<form action="">
 								<div class="input-group">
 									<input type="text" class="form-control" name="search" placeholder="Searching..."
@@ -102,29 +88,7 @@
 
 					</div>
 				</div>
-				<!-- Боковая панель навигации-Offcanvas -->
-				<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCart" aria-labelledby="offcanvasCartLabel">
-					<div class="offcanvas-header">
-						<h5 class="offcanvas-title" id="offcanvasCartLabel">Корзина для товаров</h5>
-						<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-					</div>
-					<div class="offcanvas-body">
-						<div>
-							Some text as placeholder. In real life you can have the elements you have chosen. Like, text,
-							images, lists, etc.
-						</div>
-						<div class="dropdown mt-3">
-							<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
-								Dropdown button
-							</button>
-							<ul class="dropdown-menu">
-								<li><a class="dropdown-item" href="#">Action</a></li>
-								<li><a class="dropdown-item" href="#">Another action</a></li>
-								<li><a class="dropdown-item" href="#">Something else here</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
+
 			</div><!-- ./header-middle -->
 		</header>
 		<div class="header-bottom sticky-top" id="header-nav">
@@ -164,15 +128,15 @@
 										Catalog
 									</a>
 									<ul class="dropdown-menu dropdown-menu-end animate slideIn">
-										<li><a class="dropdown-item" href="#">Обувь</a></li>
-										<li><a class="dropdown-item" href="#">Джинсы</a></li>
+										<li><a class="dropdown-item" href="category.html">Обувь</a></li>
+										<li><a class="dropdown-item" href="category.html">Джинсы</a></li>
 										<li class="nav-item dropend">
 											<a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown"
 												data-bs-auto-close="outside" aria-expanded="false">Sportswear</a>
 											<ul class="dropdown-menu dropdown-menu-end animate slideIn">
-												<li><a class="dropdown-item" href="#">Men's Sportswear</a></li>
+												<li><a class="dropdown-item" href="category.html">Men's Sportswear</a></li>
 												<li class="nav-item dropend">
-													<a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown"
+													<a class="dropdown-item dropdown-toggle" href="category.html" data-bs-toggle="dropdown"
 														data-bs-auto-close="outside" aria-expanded="false">Women's Sportswear</a>
 													<ul class="dropdown-menu dropdown-menu-end animate slideIn">
 														<li>
@@ -186,12 +150,12 @@
 														</li>
 													</ul>
 												</li>
-												<li><a class="dropdown-item" href="#">Baby's Sportswear</a></li>
-												<li><a class="dropdown-item" href="#">Spec's Sportswear</a></li>
+												<li><a class="dropdown-item" href="category.html">Baby's Sportswear</a></li>
+												<li><a class="dropdown-item" href="category.html">Spec's Sportswear</a></li>
 											</ul>
 										</li>
-										<li><a class="dropdown-item" href="#">Coat</a></li>
-										<li><a class="dropdown-item" href="#">Shirts</a></li>
+										<li><a class="dropdown-item" href="category.html">Coat</a></li>
+										<li><a class="dropdown-item" href="category.html">Shirts</a></li>
 									</ul>
 								</li>
 								<li class="nav-item">
@@ -200,13 +164,13 @@
 							</ul>
 						</div>
 					</div>
-					<div class="d-block d-lg-none">
+					<div class="d-block">
 						<a href="#" class="btn p-1">
 							<i class="fa-solid fa-heart"></i>
 							<span class="badge text-bg-warning cart-badge bg-warning rounded-circle">4</span>
 						</a>
-						<button class="btn p-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart"
-							aria-controls="offcanvasCart">
+						<button class="btn p-1" id="cart-open" type="button" data-bs-toggle="offcanvas2"
+							data-bs-target="#offcanvasCart" aria-controls="offcanvasCart">
 							<i class="fa-solid fa-cart-shopping"></i>
 							<span class="badge text-bg-warning cart-badge bg-warning rounded-circle">6</span>
 						</button>
@@ -214,7 +178,65 @@
 				</div>
 			</nav>
 		</div><!-- ./header-bottom -->
+		<!-- Боковая панель навигации-Offcanvas -->
+		<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCart" aria-labelledby="offcanvasCartLabel">
+			<div class="offcanvas-header">
+				<h5 class="offcanvas-title" id="offcanvasCartLabel">Корзина для товаров</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+			</div>
+			<div class="offcanvas-body">
+				<div class="table-responsive">
+					<table class="table ofcanvasCart-table">
+						<tbody>
+							<tr>
+								<td class="product-img-td"><a href="#"><img src="assets/img/product/product_1.jpg" alt=""></a></td>
+								<td><a href="#">Product 1 Lorem ipsum dolor sit amet consectetur
+										adipisicing.</a></td>
+								<td>$65</td>
+								<td>&times;1</td>
+								<td><button class="btn btn-danger"><i class="fa-regular fa-circle-xmark"></i></button></td>
+							</tr>
+							<tr>
+								<td class="product-img-td"><a href="#"><img src="assets/img/product/product_2.jpg" alt=""></a></td>
+								<td><a href="#">Product 2</a></td>
+								<td>$80</td>
+								<td>&times;2</td>
+								<td><button class="btn btn-danger"><i class="fa-regular fa-circle-xmark"></i></button></td>
+							</tr>
+							<tr>
+								<td class="product-img-td"><a href="#"><img src="assets/img/product/product_3.jpg" alt=""></a></td>
+								<td><a href="#">Product 3 L</a></td>
+								<td>$100</td>
+								<td>&times;1</td>
+								<td><button class="btn btn-danger"><i class="fa-regular fa-circle-xmark"></i></button></td>
+						<tfoot>
+							<tr>
+								<td colspan="4" class="text-end">Total:</td>
+								<td>$325</td>
+							</tr>
+						</tfoot>
+						</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="text-end mt-3">
+					<a href="#" class="btn btn-outline-warning">Cart</a>
+					<a href="#" class="btn btn-outline-secondary">Checkout</a>
+				</div>
+				<div class="dropdown mt-3">
+					<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+						Dropdown button
+					</button>
+					<ul class="dropdown-menu">
+						<li><a class="dropdown-item closecart" href="#footer" data-href="footer">Footer</a></li>
+						<li><a class="dropdown-item closecart" href="#about" data-href="about">About Us</a></li>
+						<li><a class="dropdown-item closecart" href="#map" data-href="map">Google Map</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
 		<main class="main">
+			<!-- Carousel slides -->
 			<div id="carouselEshop" class="carousel slide carousel-fade">
 				<div class="carousel-indicators">
 					<button type="button" data-bs-target="#carouselEshop" data-bs-slide-to="0" class="active" aria-current="true"
@@ -271,7 +293,7 @@
 					<span class="carousel-next-icon" aria-hidden="true"><i class="fa-solid fa-angle-right"></i></span>
 					<span class="visually-hidden">Следующий</span>
 				</button>
-			</div>
+			</div><!-- ./Carousel slides -->
 			<section class="advantages">
 				<div class="container-fluid">
 					<div class="row mb-5">
@@ -770,7 +792,7 @@
 					</div>
 				</div>
 			</section><!-- ./main.new-product-Новинки -->
-			<section class="about-us">
+			<section class="about-us" id="about">
 				<div class="container">
 					<div class="row mb-5">
 						<div class="col-12">
@@ -795,14 +817,13 @@
 						</div>
 					</div>
 				</div>
-			</section>
-			<iframe
+			</section><!-- ./main.about-us -->
+			<iframe id="map"
 				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.4986918047953!2d2.3078318411322067!3d48.8677691031521!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66fc51e578d35%3A0xf3e8c5c8508fad90!2sGucci%20-%20Paris%20Flagship%20Montaigne!5e0!3m2!1sru!2sru!4v1720176933045!5m2!1sru!2sru"
 				width="100%" height="450" style="border:0; display:block;" allowfullscreen="" loading="lazy"
-				referrerpolicy="no-referrer-when-downgrade"></iframe>
-
+				referrerpolicy="no-referrer-when-downgrade"></iframe><!-- ./Google-maps-paris-->
 		</main>
-		<footer class="footer">
+		<footer class="footer" id="footer">
 			<div class="container-fluid">
 				<div class="row text-center">
 					<div class="col-md-3 col-6">

@@ -1,6 +1,42 @@
 window.addEventListener('scroll', function () {
-  document.getElementById('header-nav').classList.toggle('headernav-scroll', window.scrollY > 135)
+  document.getElementById('header-nav').classList.toggle('headernav-scroll', window.scrollY > 135);
 });
+
+const offcanvasCartEl = document.getElementById('offcanvasCart');
+const offcanvasCart = new bootstrap.Offcanvas(offcanvasCartEl);
+
+document.getElementById('cart-open').addEventListener('click', (e) => {
+  e.preventDefault();
+  offcanvasCart.toggle();
+});
+document.querySelectorAll('.closecart').forEach(item => {
+  item.addEventListener('click', (e) => {
+    e.preventDefault();
+    offcanvasCart.hide();
+    let href = item.dataset.href;
+    document.getElementById(href).scrollIntoView();
+  });
+});
+/*const offcanvasCartEl = document.getElementById('offcanvasCart');
+const offcanvasCart = new bootstrap.Offcanvas(offcanvasCartEl);
+ 
+document.querySelectorAll('.closecart').forEach(item => {
+  item.addEventListener('click', (e) => {
+    e.preventDefault();
+    offcanvasCart.hide();
+    setTimeout(() => {
+      const href = item.dataset.href;
+      document.getElementById(href).scrollIntoView();
+    }, 500);
+ 
+    // let href = item.href.split('#').pop();
+    /*let href = item.dataset.href;
+    offcanvasCartEl.addEventListener('hidden.bs.offcanvas', () => {
+      document.getElementById(href).scrollIntoView();
+  })
+  });
+});*/
+
 $(document).ready(function () {
   $(".owl-carousel-full").owlCarousel({
     loop: true,
@@ -44,3 +80,5 @@ $(document).ready(function () {
 
   })
 });
+
+

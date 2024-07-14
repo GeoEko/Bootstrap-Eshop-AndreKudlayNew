@@ -206,6 +206,28 @@ ul.social-icons a:hover {
     border: 1px solid var(--contrast-color);
 }
 
+/* Боковая панель навигации-Offcanvas*/
+.ofcanvasCart-table .product-img-td {
+    width: 70px;
+    text-align: center;
+}
+
+.ofcanvasCart-table img {
+    max-width: 50px;
+}
+
+.ofcanvasCart-table a {
+    text-decoration: none;
+    display: block;
+}
+
+.ofcanvasCart-table a:hover {
+    text-decoration: underline;
+
+}
+
+/* Боковая панель навигации-Offcanvas*/
+
 /*= Header Rules-Middle===================*/
 /*= Header Rules-Bottom===================*/
 
@@ -448,13 +470,15 @@ ul.social-icons a:hover {
     background-color: #fff;
 }
 
-.about-us .section-title span {
+.about-us .section-title span,
+.sidebar .section-title span {
     background-color: #fff;
 }
 
 /*= About Us===================*/
 
 /*= Main Rules===================*/
+
 /*= Footer===================*/
 footer {
     background-color: var(--contrast-color);
@@ -486,8 +510,8 @@ footer a:hover {
 }
 
 /*= Footer===================*/
+/*= Button Top Navigate===================*/
 
-/*= Media Rules for Header-bottom ===================*/
 #top {
     position: fixed;
     bottom: 20px;
@@ -509,6 +533,137 @@ footer a:hover {
     opacity: 1;
 }
 
+/*= Button Top Navigate===================*/
+/*= Category Pages===================*/
+.breadcrumbs {
+    margin: 30px 0;
+    background-color: #fff;
+    padding: 1rem;
+}
+
+.breadcrumbs ul {
+
+    display: flex;
+    margin: 0;
+    padding: 0;
+
+}
+
+.breadcrumbs li {
+    font-size: 18px;
+}
+
+.breadcrumbs a {
+    text-decoration: none;
+    color: var(--contrast-color);
+    transition: all 0.5s;
+    margin-right: 0.5rem;
+}
+
+.breadcrumbs a:hover {
+    color: var(--accent-color);
+}
+
+.breadcrumbs a::after {
+    content: '/';
+    /* content: '>'; */
+    padding-left: 0.5rem;
+    color: var(--contrast-color);
+}
+
+.sidebar {
+    background-color: #fff;
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+}
+
+.filter-block:not(:last-child) {
+    margin-bottom: 2rem;
+}
+
+.filter-block .form-check {
+    margin-bottom: 0.5rem;
+}
+
+.form-check-input[type=checkbox] {
+    border-radius: 0;
+    border-color: var(--gray-color);
+}
+
+
+.form-check-input:focus {
+    border-color: var(--gray-color);
+    box-shadow: none;
+}
+
+.form-check-input:checked {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+.filter-block .badge {
+    color: rgba(91, 93, 99, 0.2);
+
+}
+
+/* .checkbox1 {
+    padding: 0.5rem 1rem;
+    display: inline-block;
+} */
+
+.checkbox1>input {
+    position: relative;
+    opacity: 0;
+}
+
+.form-check .LbBaby {
+    z-index: 1;
+    margin-left: -24px;
+    /* place-items: center; */
+    width: 16px;
+    height: 16px;
+    border-radius: 0;
+    border: 1px solid var(--gray-color);
+    /* transform: rotate(-15deg); */
+    transition: .2s ease;
+}
+
+.form-check .LbBaby:focus {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+label.LbBaby::before {
+    content: '';
+    position: absolute;
+    /* z-index: 1; */
+    display: block;
+    width: 60px;
+    height: 30px;
+    transform: rotate(-32deg) translate(5px, -25px);
+    background: 0 7.5px / 15px calc(100% - 15px) linear-gradient(180deg, #7e0300, #b40001), 7.5px 100% / calc(100% - 15px) 15px linear-gradient(90deg, #b40001, #f50000), radial-gradient(circle 15px at left 7.5px top 7.5px, #7e0300 7px, #fa00 8px), radial-gradient(circle 15px at left 7.5px bottom 7.5px, #b40001 7px, #fa00 8px), radial-gradient(circle 15px at right 7.5px bottom 7.5px, #f50000 7px, #fa00 8px);
+    background-repeat: no-repeat;
+    opacity: 0;
+    clip-path: polygon(0 0, 0 0, 0 0, 0 0);
+    filter: drop-shadow(-3px 3px 3px #0008) hue-rotate(calc(var(--hue, 0) * 1deg));
+    transition: opacity .2s ease-out, clip-path 0s .2s;
+}
+
+input.Baby:checked+label.LbBaby::before {
+    opacity: 1;
+
+    clip-path: polygon(-10% 0, 100% 0, 110% 100%, 0 200%);
+    transition: opacity 0s, clip-path .5s ease-out;
+}
+
+.checkbox1>span {
+    position: absolute;
+    z-index: 1;
+    margin-left: 8px;
+}
+
+/*= Category Pages===================*/
+/*= Media Rules for Header-bottom ===================*/
 @media all and (max-width: 992px) {
     .header-bottom .dropend .dropdown-toggle::before {
         display: none;
