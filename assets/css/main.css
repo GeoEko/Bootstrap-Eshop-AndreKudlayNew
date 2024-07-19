@@ -662,6 +662,22 @@ input.Baby:checked+label.LbBaby::before {
     margin-left: 8px;
 }
 
+.page-link {
+    color: var(--contrast-color);
+}
+
+.page-link:hover {
+    color: #fff;
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+.active>.page-link,
+.page-link.active {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
 /*= Category Pages===================*/
 /*= Media Rules for Header-bottom ===================*/
 @media all and (max-width: 992px) {
@@ -707,5 +723,7 @@ input.Baby:checked+label.LbBaby::before {
         display: block;
     }
 }
+
+@media only screen and (min-width: 768px) {}
 
 /*= Media Rules for Header-bottom ===================*/
